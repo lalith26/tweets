@@ -10,6 +10,7 @@ var Body = React.createClass({
     },
 
     setDetailsType: function setDetailsType(value) {
+        console.log('set detailsType called', value);
         this.setState({detailsType: value});
     },
 

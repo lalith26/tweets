@@ -1,6 +1,17 @@
 .details-container {
     display: flex;
     flex-direction: column;
+    height: 900px;
+    background-color: #FFFAF2;
+}
+
+.details-smiley-container {
+    @extend .custom-flex-center;
     height: 700px;
     background-color: #FFFAF2;
+}
+
+.custom-smiley-size {
+    font-size: 15em;
+    color: #4D4C46;
 }

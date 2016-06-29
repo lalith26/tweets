@@ -117,14 +117,15 @@
 
 .display-picture-container {
     @extend .custom-flex-center;
-    width: 40px;
-    flex-grow: 1;
+    @extend .custom-icon-container;
+    width: 70px;
 
-    .display-picture {
-        width: 40px;
-        height: 40px;
-        border: 1px solid #DCD8CF;
-        border-radius: 50%;
-        background-color: #FEFEFE;
+    .display-picture{
+        @extend .custom-icon;
+        color: #4D4C46;
+    }
+
+    .display-picture:hover {
+        @include custom-icon-hover(#FFFFFF);
     }
 }

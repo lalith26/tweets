@@ -34,6 +34,7 @@ var Header = React.createClass({
                 </div>
                 <div className="display-picture-container">
                     <div className="display-picture">
+                        <i className="fa fa-user" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>

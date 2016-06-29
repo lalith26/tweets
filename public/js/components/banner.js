@@ -1,6 +1,13 @@
 var React = require('react');
 
 var Banner = React.createClass({
+    typeMap: [
+        'tweets',
+        'photos',
+        'following',
+        'followers'
+    ],
+
     propTypes: {
         setDetailsType: React.PropTypes.func.isRequired
     },
@@ -15,6 +22,7 @@ var Banner = React.createClass({
         event.preventDefault();
         var target = event.target;
         this.setState({selectedTab: Number(target.dataset.bannerval)});
+        this.props.setDetailsType(this.typeMap[Number(target.dataset.bannerval)]);
     },
 
     getBannerItemClassNames: function getBannerItemClassNames(value) {
