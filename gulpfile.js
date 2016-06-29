@@ -43,12 +43,24 @@ gulp.task('bundle', function() {
     }));
 
     return watcher.on('update', function() {
-        watcher.bundle()
+        watcher.bundle(function(err, buf) {
+            if (err) {
+                console.log(err.toString())
+            } else {
+                console.log('build.js updated');
+            }
+        })
         .pipe(source(path.OUT))
         .pipe(gulp.dest(path.DEST_JS))
-        console.log('Updated');
+        console.log('Updated the bundle');
     })
-    .bundle()
+    .bundle(function(err, buf) {
+        if (err) {
+            console.log(err.toString())
+        } else {
+            console.log('build.js updated');
+        }
+    })
     .pipe(source(path.OUT))
     .pipe(gulp.dest(path.DEST_JS));
 

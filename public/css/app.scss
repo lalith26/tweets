@@ -5,9 +5,14 @@ body {
    background-color: #EFEAE2;
 }
 
+input:focus{
+    outline: none;
+}
+
 @import './vendor_css/basscss.min';
 @import './vendor_css/font-awesome.min';
 @import './components/common';
 @import './components/header';
 @import './components/body';
 @import './components/banner';
+@import './components/details';

@@ -1,6 +1,10 @@
 var React = require('react');
 
 var Banner = React.createClass({
+    propTypes: {
+        setDetailsType: React.PropTypes.func.isRequired
+    },
+
     getInitialState: function getInitialState() {
         return {
             selectedTab : 0
@@ -8,6 +12,7 @@ var Banner = React.createClass({
     },
 
     handleBannerClick: function handleBannerClick(event) {
+        event.preventDefault();
         var target = event.target;
         this.setState({selectedTab: Number(target.dataset.bannerval)});
     },
