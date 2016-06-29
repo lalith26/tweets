@@ -1,4 +1,142 @@
-.header-container {
+.custom-flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.custom-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-icon-container {
+    height: 100%;
+    width: 70px;
+    height: 70px;
+}
+
+.custom-icon {
+    @extend .custom-flex-center;
+    width: 40px;
     height: 40px;
+    border: 1px solid #DCD8CF;
+    border-radius: 50%;
+}
+
+.header-container {
+    display: flex;
+    height: 70px;
     background-color: #FFFAF2;
+}
+
+@mixin custom-icon-hover($color) {
+    background-color: #4D4C46;
+    color: $color;
+    cursor: pointer;
+}
+
+.feather-icon-container {
+    @extend .custom-flex-center;
+    @extend .custom-icon-container;
+    border-right: 1px solid #DCD8CF;
+    width: 70px;
+
+    .feather-icon {
+        @extend .custom-icon;
+        background-color: #6D96C0;
+        color: #FFFFFF;
+    }
+
+    .feather-icon:hover {
+        background-color: #4D4C46;
+        color: #FFFFFF;
+    }
+}
+
+.bell-icon-container {
+    @extend .custom-flex-center;
+    @extend .custom-icon-container;
+    width: 70px;
+
+    .bell-icon {
+        @extend .custom-icon;
+        color: #4D4C46;
+    }
+
+    .bell-icon:hover {
+        @include custom-icon-hover(#EFEAE2);
+    }
+}
+
+
+.email-icon-container {
+    @extend .custom-flex-center;
+    @extend .custom-icon-container;
+    width: 70px;
+
+    .email-icon {
+        @extend .custom-icon;
+        color: #4D4C46;
+    }
+
+    .email-icon:hover {
+        @include custom-icon-hover(#FFFFFF);
+    }
+}
+
+.hash-icon-container {
+    @extend .custom-flex-center;
+    @extend .custom-icon-container;
+    width: 70px;
+
+    .hash-icon {
+        @extend .custom-icon;
+        color: #4D4C46;
+    }
+
+    .hash-icon:hover {
+        @include custom-icon-hover(#FFFFFF);
+    }
+}
+
+.twitter-icon-container {
+    @extend .custom-flex-center;
+    @extend .custom-icon-container;
+    flex-grow: 50;
+
+    .twitter-icon {
+        @extend .custom-icon;
+        border: none;
+        color: #6D96C0;
+    }
+
+}
+
+.search-bar-container {
+    @extend .custom-flex-center;
+    width: 150px;
+    flex-grow: 1;
+
+    .search-bar {
+        width: 150px;
+        height: 30px;
+        border: 1px solid #DCD8CF;
+        border-radius: 20px;
+        padding-left: 10px;
+    }
+}
+
+.display-picture-container {
+    @extend .custom-flex-center;
+    width: 40px;
+    flex-grow: 1;
+
+    .display-picture {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #DCD8CF;
+        border-radius: 50%;
+        background-color: #FEFEFE;
+    }
 }
