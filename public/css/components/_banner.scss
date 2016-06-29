@@ -1,0 +1,27 @@
+.banner-container {
+    display: flex;
+    height: 80px;
+    background-color: #FFFAF2;
+    margin: 40px 0 40px;
+}
+
+.banner-item {
+    @extend .custom-flex-center;
+    flex-direction: column;
+    cursor: pointer;
+
+    .banner-item-heading {
+        color: #BAB5A1;
+        font-size: 0.8em;
+        font-weight: lighter;
+    }
+
+    .banner-item-value {
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+}
+
+.banner-selected-item {
+    border-bottom: 8px solid #6D97C0;
+}

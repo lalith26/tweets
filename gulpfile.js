@@ -28,7 +28,6 @@ var path = {
 
 gulp.task('copy', function() {
     gulp.src(path.HTML).pipe(gulp.dest(path.DEST));
-    gulp.src(path.VENDOR_CSS).pipe(gulp.dest(path.DEST_CSS));
     gulp.src(path.FONTS).pipe(gulp.dest(path.DEST_FONTS));
 });
 
@@ -62,7 +61,6 @@ gulp.task('sass', function() {
 });
 
 gulp.task('webserver', function() {
-    console.log('in serve');
     gulp.src('dist')
         .pipe(webserver({
             host: 'localhost',
@@ -72,7 +70,6 @@ gulp.task('webserver', function() {
             directoryListing: false,
             open: true
         }));
-    console.log('serve ended');
 });
 
 gulp.task('build', ['copy', 'sass', 'bundle']);
